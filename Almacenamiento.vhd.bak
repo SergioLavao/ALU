@@ -1,0 +1,31 @@
+LIBRARY IEEE;
+USE ieee.std_logic_1164.all;
+
+ ENTITY Almacenamiento IS
+		GENERIC ( max:INTEGER := 16);
+		PORT(		Dat		:IN	  STD_LOGIC_VECTOR(max-1 DOWNTO 0);
+					ena_almacenar  :IN STD_LOGIC;
+					Carry          :IN STD_LOGIC;
+					R		
+					Data_despla :OUT	  STD_LOGIC_VECTOR(max-1 DOWNTO 0);
+					Data_rota   :OUT	  STD_LOGIC_VECTOR(max-1 DOWNTO 0);
+					Data_NOT    :OUT    STD_LOGIC_VECTOR(max-1 DOWNTO 0));
+
+END ENTITY  Almacenamiento;
+-------------------------------------------------------------
+ARCHITECTURE gatelevel OF  Almacenamiento IS
+
+BEGIN 
+		
+		Data_suma<= NOT Data_1; 
+		
+		Data_rota(max-1)<= Data_1(0);
+		Data_despla(max-1)<= '0';
+		rotacion: FOR i IN 0 To max-2 GENERATE
+			Data_rota(i)<= Data_1(i+1);
+			Data_despla(i)<= Data_1(i+1);
+		END GENERATE;
+							
+				
+							
+END ARCHITECTURE gatelevel;
