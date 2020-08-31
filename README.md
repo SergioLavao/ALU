@@ -1,7 +1,7 @@
 # Arithmetic Logic Unit
 Programmed in VHDL using only logic gates AND, OR, NOT and XOR.
 
-<img src="./BlockDiagram.svg"z>
+<img src="./BlockDiagram.svg">
 
 | Selector | Operation | 
 | :---: | :---: | 
